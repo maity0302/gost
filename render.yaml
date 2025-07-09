@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: gost-proxy
+    env: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    autoDeploy: true
+    envVars:
+      - key: GOST_ARGS
+        value: "-L=:1080"
